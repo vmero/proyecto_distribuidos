@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Image Converter</title>
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-primary">
+      <a href="index.html" class="navbar-brand link text-white font-weight-bold"
+        >File Converter Espol</a
+      >
+    </nav>
+    <div class="container">
+      <div class="main-title">
+        <h1 class="text-center">Convertir Imagen</h1>
+      </div>
+      <div class="col-md-6 mx-auto">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h3 class="text-center lead font-weight-bold">
+              DATOS DE CONVERSIÓN
+            </h3>
+          </div>
+          <div class="card-body">
+            <form>
+              <!-- DATOS DEL ARCHIVO DE IMAGE (FILE) -->
+              <div class="input-group">
+                <label for="imageFile" class="font-weight-bold"
+                  >Escoja el archivo de imagen</label
+                >
+
+                <input
+                  type="file"
+                  id="imageFile"
+                  name="choosenImage"
+                  accept=".jpg, .png, .gif"
+                />
+              </div>
+              <!-- DATOS DEL ARCHIVO IMAGE (FILE) -->
+
+              <!-- DATOS DEL FORMATO DE DESTINO -->
+              <div class="my-2 form-group">
+                <p class="font-weight-bold">Escoja el formato de destino</p>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="choosenImageFormat"
+                    id="jpg"
+                    value="jpg"
+                    checked
+                  />
+                  <label class="form-check-label" for="jpg">JPG</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="choosenImageFormat"
+                    id="png"
+                    value="png"
+                  />
+                  <label class="form-check-label" for="png">PNG</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="choosenImageFormat"
+                    id="gif"
+                    value="gif"
+                  />
+                  <label class="form-check-label" for="gif">GIF</label>
+                </div>
+              </div>
+              <!-- DATOS DEL FORMATO DE DESTINO -->
+
+              <!-- DATOS DEL COLOR DE LA IMAGEN -->
+              <div class="form-group my-2">
+                <p class="font-weight-bold">
+                  Escoja el color de la imagen
+                </p>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="choosenColor"
+                    id="colored"
+                    value="colored"
+                    checked
+                  />
+                  <label class="form-check-label" for="colored"
+                    >A Colores</label
+                  >
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="choosenColor"
+                    id="gray"
+                    value="gray"
+                  />
+                  <label class="form-check-label" for="gray"
+                    >Escala de grises</label
+                  >
+                </div>
+              </div>
+              <!-- DATOS DEL COLOR DE LA IMAGEN -->
+
+              <!-- DATOS DEL RECORTE EN PIXELES DE LA IMAGEN -->
+              <p class="font-weight-bold">
+                Recortar en pixeles
+              </p>
+              <div class="input-group">
+                <input
+                  type="number"
+                  placeholder="Arriba"
+                  class="form-control"
+                  name="crop-top"
+                />
+                <input
+                  type="number"
+                  placeholder="Abajo"
+                  class="form-control"
+                  name="crop-bottom"
+                />
+              </div>
+              <div class="input-group">
+                <input
+                  type="number"
+                  placeholder="Izquierda"
+                  class="form-control"
+                  name="crop-left"
+                />
+                <input
+                  type="number"
+                  placeholder="Derecha"
+                  class="form-control"
+                  name="crop-right"
+                />
+              </div>
+              <p class="warning">(0,0,0,0) Si estos campos se dejan vacíos</p>
+              <!-- DATOS DEL RECORTE EN PIXELES DE LA IMAGEN -->
+              <div class="text-center">
+                <button
+                  id="sendImageBtn"
+                  type="submit"
+                  class="btn btn-primary btn-lg my-3"
+                >
+                  Convertir
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/sendImage.js"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Video Converter</title>
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-primary">
+      <a href="index.html" class="navbar-brand link text-white font-weight-bold"
+        >File Converter Espol</a
+      >
+    </nav>
+    <div class="container">
+      <div class="main-title">
+        <h1 class="text-center">Convertir Video</h1>
+      </div>
+      <div class="col-md-6 mx-auto">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h3 class="text-center lead font-weight-bold">
+              DATOS DE CONVERSIÓN
+            </h3>
+          </div>
+          <div class="card-body">
+            <form>
+              <!-- DATOS DEL ARCHIVO DE VIDEO (FILE) -->
+              <div class="input-group">
+                <label for="videoFile" class="font-weight-bold"
+                  >Escoja el archivo de video</label
+                >
+
+                <input
+                  type="file"
+                  id="videoFile"
+                  name="choosenVideo"
+                  accept=".mp4, .avi, .mpeg"
+                />
+              </div>
+              <!-- DATOS DEL ARCHIVO VIDEO (FILE) -->
+              <!-- DATOS DEL FORMATO DE DESTINO -->
+              <div class="my-2 form-group">
+                <p class="font-weight-bold">Escoja el formato de destino</p>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="choosenVideoFormat"
+                    id="mp4"
+                    value="mp4"
+                    checked
+                  />
+                  <label class="form-check-label" for="mp4">MP4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="choosenVideoFormat"
+                    id="avi"
+                    value="avi"
+                  />
+                  <label class="form-check-label" for="avi">AVI</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="choosenVideoFormat"
+                    id="mpeg"
+                    value="mpeg"
+                  />
+                  <label class="form-check-label" for="mpeg">MPEG</label>
+                </div>
+              </div>
+              <!-- DATOS DEL FORMATO DE DESTINO -->
+              <!-- PARÁMETROS A CONFIGURAR -->
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input
+                    name="quit-audio"
+                    type="checkbox"
+                    class="form-check-input"
+                  />Quitar Audio
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input
+                    name="create-thumbnail"
+                    type="checkbox"
+                    class="form-check-input"
+                  />Crear thumbnail
+                </label>
+              </div>
+              <!-- PARÁMETROS A CONFIGURAR -->
+                <div class="text-center">
+                  <button id="sendVideoBtn" type="submit" class="btn btn-primary btn-lg my-3">
+                    Convertir
+                  </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/sendVideo.js"></script>
+  </body>
+</html>
