@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-title {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  animation: moverHaciaDerecha 1s ease-out;
+  /* font-size: 50px; */
+}
+
+.card {
+  min-width: 16rem;
+  box-shadow: 3px 3px 10px #333;
+}
+
+.cards {
+  animation: aparecerCartas 0.75s ease-out 0.6s;
+  animation-fill-mode: backwards;
+}
+
+.icons {
+  display: block;
+  margin: 15px auto;
+  width: 60%;
+}
+
+.warning {
+  color: red;
+  font-size: 12px;
+}
+
+@keyframes moverHaciaDerecha {
+  0% {
+    transform: translateX(-150px);
+  }
+
+  80% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes aparecerCartas {
+  0% {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
